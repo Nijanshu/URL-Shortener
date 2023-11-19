@@ -65,7 +65,7 @@ router.get('/:shURL',async (req, res) => {
     } else {
       res.json(
         {
-          "error": "No short URL found for the given input"
+          error: 'invalid url'
         }
       )
       // Handle the case where the URL does not exist
