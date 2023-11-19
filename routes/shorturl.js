@@ -34,7 +34,7 @@ router.post('/', async function(req, res) {
     console.log(surl);
   // Basic URL validation
   if (!isValidUrl(url)) {
-    return res.status(400).json({ error: 'Invalid URL' });
+    return res.status(400).json({ error: 'invalid url' });
   }
   const resp=new URL({
     origURL: url,
@@ -65,7 +65,7 @@ router.get('/:shURL',async (req, res) => {
     } else {
       res.json(
         {
-          error: 'invalid url'
+          error: `invalid url`
         }
       )
       // Handle the case where the URL does not exist
