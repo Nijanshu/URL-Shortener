@@ -34,7 +34,7 @@ router.post('/', async function(req, res) {
     console.log(surl);
   // Basic URL validation
   if (!isValidUrl(url)) {
-    return res.status(400).json(
+    return res.json(
       { error: 'invalid url' }
     );
   }
